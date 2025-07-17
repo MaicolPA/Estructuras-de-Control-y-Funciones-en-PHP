@@ -46,10 +46,12 @@ function calculoCostoTotal($clave, $minutos)
 
         case 29:
             echo "Esta llamando desde Oceania<br>";
-            $total = ($descuento) ? $minutos * 5- (($minutos * 5) * 0.1) : $minutos * 5;
+            $total = ($descuento) ? $minutos * 5 - (($minutos * 5) * 0.1) : $minutos * 5;
             echo "Total a pagar: $total<br>";
             break;
+        default:
+            echo "Clave no válida. Por favor, ingrese una clave válida.";
+            return;
     }
 }
 calculoCostoTotal(29, 50);
-?>
